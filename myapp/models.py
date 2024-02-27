@@ -22,7 +22,7 @@ class Category(models.Model):
     m_title = models.CharField(max_length=150, null=False, blank=False)
     m_keyword = models.CharField(max_length=150, null=False, blank=False)
     m_description = models.TextField(max_length=500, null=False, blank=False)
-    created = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.name
@@ -45,8 +45,6 @@ class product (models.Model):
     m_keyword = models.CharField(max_length=150, null=False, blank=False)
     m_description = models.TextField(max_length=500, null=False, blank=False)
     created = models.DateTimeField(auto_now_add=True)
-    
-    
     
     def __str__(self):
         return self.name
