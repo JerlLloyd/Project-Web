@@ -19,9 +19,6 @@ class Category(models.Model):
     description = models.TextField(max_length=500, null=False, blank=False)
     status = models.BooleanField(default=False, help_text="0=default-1=hidden" )
     trending = models.BooleanField(default=False, help_text="0=default-1=trending" )
-    m_title = models.CharField(max_length=150, null=False, blank=False)
-    m_keyword = models.CharField(max_length=150, null=False, blank=False)
-    m_description = models.TextField(max_length=500, null=False, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
@@ -34,17 +31,14 @@ class product (models.Model):
     name = models.CharField(max_length=150, null=False, blank=False)
     p_image = models.ImageField(upload_to=get_file_path, null=True, blank=True)
     s_description = models.TextField(max_length=250, null=False, blank=False)
-    description = models.TextField(max_length=500, null=False, blank=False)
+    description = models.TextField(max_length=700, null=False, blank=False)
     qty =  models.IntegerField(null=False,blank=False)
     price = models.FloatField(null=False,blank=False)
     s_price = models.FloatField(null=False,blank=False)
     status = models.BooleanField(default=False, help_text="0=default-1=hidden" )
     trending = models.BooleanField(default=False, help_text="0=default-1=trending" )
     tag = models.CharField(max_length=150, null=False, blank=False)
-    m_title = models.CharField(max_length=150, null=False, blank=False)
-    m_keyword = models.CharField(max_length=150, null=False, blank=False)
-    m_description = models.TextField(max_length=500, null=False, blank=False)
-    created = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.name
@@ -90,7 +84,7 @@ class Order(models.Model):
         return '{} - {}'.format(self.id, self.tracking_no)
     
 class OrderItem(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE,related_name="items")
     product = models.ForeignKey(product, on_delete=models.CASCADE)
     price = models.FloatField(null=False)
     quantity = models.IntegerField(null=False)

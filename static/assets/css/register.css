@@ -16,7 +16,7 @@ body {
 #login-box {
   position: relative;
   margin: 5% auto;
-  width: 600px;
+  width: 320px;
   height: 500px;
   background: #FFF;
   border-radius: 2px;
@@ -90,53 +90,12 @@ input[type="submit"]:active {
   transition: 0.1s ease;
 }
 
-.or {
-  position: absolute;
-  top: 225px;
-  left: 270px;
-  width: 40px;
-  height: 40px;
-  background: #DDD;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  line-height: 40px;
-  text-align: center;
-}
-
-.right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  box-sizing: border-box;
-  padding: 40px;
-  width: 300px;
-  height: 400px;
-  background: url('https://goo.gl/YbktSj');
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 2px 2px 0;
-  left: 290px;
-}
-
 .right .loginwith {
   display: block;
   margin-bottom: 40px;
   font-size: 28px;
   color: #FFF;
   text-align: center;
-}
-
-button.social-signin {
-  margin-bottom: 20px;
-  width: 220px;
-  height: 36px;
-  border: none;
-  border-radius: 2px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  transition: 0.2s ease;
-  cursor: pointer;
 }
 
 button.social-signin:hover,
@@ -149,19 +108,6 @@ button.social-signin:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease;
 }
-
-button.social-signin.facebook {
-  background: #32508E;
-}
-
-button.social-signin.twitter {
-  background: #55ACEE;
-}
-
-button.social-signin.google {
-  background: #DD4B39;
-}
-
 
 .button {
   align-items: center;
@@ -192,6 +138,7 @@ button.social-signin.google {
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 18px;
+  margin: 3px 22px;
 }
 
 .button:focus {

@@ -5,13 +5,6 @@ from .models import *
 
 
 
-from .serializers  import *
-from rest_framework.views import APIView
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-
-
-
 def home(request):
     trending_products = product.objects.filter(trending=1)
     context = {'trending_products':trending_products}
@@ -46,49 +39,4 @@ def productview(request, fat_sid, prod_sid):
     return render(request, "product/views.html", context)
 
 
-
-# GET the data API
-
-class UserView(APIView):
-    def get(self, request):
-        queryset = User.objects.all()
-        serializer = CustomUserSerializer(queryset, many = True)
-        return Response(serializer.data)
-
-class collectionsView(APIView):
-    def get(self, request):
-        queryset = Category.objects.all()
-        serializer = CategorySerializer(queryset, many = True)
-        return Response(serializer.data)
-
-class productView(APIView):
-    def get(self, request):
-        queryset = product.objects.all()
-        serializer = productSerializer(queryset, many = True)
-        return Response(serializer.data)
-        
-class CartView(APIView):
-    def get(self, request):
-        queryset = Cart.objects.all()
-        serializer = CartSerializer(queryset, many = True)
-        return Response(serializer.data)
-        
-class WishlistView(APIView):
-    def get(self, request):
-        queryset = Wishlist.objects.all()
-        serializer = WishlistSerializer(queryset, many = True)
-        return Response(serializer.data)
-        
-class OrderView(APIView):
-    def get(self, request):
-        queryset = Order.objects.all()
-        serializer = OrderSerializer(queryset, many = True)
-        return Response(serializer.data)
-        
-
-
     
-     
-
-
-
