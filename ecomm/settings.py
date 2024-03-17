@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-tcmo9sb=z_o32zmn-91h_9g8-w_1#nkzp5#v54vcs=gx$18z*7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django-websites.herokuapp.com']
 
 
 # Application definition
@@ -102,12 +102,12 @@ WSGI_APPLICATION = 'ecomm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample',
-        'USER': 'lloyd',
-        'PASSWORD': 'garcia316',
-        'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
-        'PORT': '3306',      # or the port on which your MySQL server is listening
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9vamd1dkdjomo',
+        'USER': 'uegblncck80568',
+        'PASSWORD': 'p0e171b90b7d8908460d7a96936b2b130a3992fd9a7717fec8a77c7334ec0f835',
+        'HOST': 'ceu9lmqblp8t3q.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',  # or the hostname where your MySQL server is running
+        'PORT': '5432',      # or the port on which your MySQL server is listening
     }
 }
 
