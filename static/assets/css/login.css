@@ -10,6 +10,7 @@ html,body{
   place-items: center;
   background: #f2f2f2;
   background: linear-gradient(-135deg, #c850c0, #4158d0); 
+  background-repeat: no-repeat;
 }
 ::selection{
   background: #4158d0;
@@ -127,4 +128,15 @@ form .signup-link a{
 form .pass-link a:hover,
 form .signup-link a:hover{
   text-decoration: underline;
+}
+
+@media (max-width: 768px) { 
+  .wrapper { 
+    width: 60px%; 
+    padding: 10px; 
+    position: relative;
+    padding-left: 20px;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
 }
