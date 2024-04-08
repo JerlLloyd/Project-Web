@@ -132,11 +132,11 @@ form .signup-link a:hover{
 
 @media (max-width: 768px) { 
   .wrapper { 
-    width: 60px%; 
+    width: 27px%; 
     padding: 10px; 
     position: relative;
     padding-left: 20px;
     margin-right: 50px;
-    margin-left: 40px;
+    margin-left: 25px;
   }
 }
