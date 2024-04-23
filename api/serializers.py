@@ -5,10 +5,21 @@ from django.contrib.auth import get_user_model
 from myapp.models import *
 
 #GET user model
-class UserSerializers(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = get_user_model()
-        fields = ["id", "username", "password", "first_name", "last_name", "email", "is_superuser", "is_staff", "is_active"]
+        model = User
+        fields = ["id", "username", "email"]
+
+class RegisterSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
+        
+    def create(self, validated_data):
+        user = User.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
+        return user
         
 
 
