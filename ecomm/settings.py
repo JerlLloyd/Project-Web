@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-tcmo9sb=z_o32zmn-91h_9g8-w_1#nkzp5#v54vcs=gx$18z*7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-websites.herokuapp.com','https://django-websites-dd7e625e6703.herokuapp.com/api/']
+ALLOWED_HOSTS = ['django-websites.herokuapp.com','https://django-websites-dd7e625e6703.herokuapp.com/api/','http://django-websites-dd7e625e6703.herokuapp.com/api/']
 
 
 # Application definition
